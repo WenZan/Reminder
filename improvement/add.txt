@@ -1,0 +1,16 @@
+MP3player.setVolume(10,10);
+
+void SFEMP3Shield::end() {
+
+  stopTrack(); // Stop and CLOSE any open tracks.
+  disableRefill(); // shut down specific interrupts
+  cs_high();  //MP3_XCS, Init Control Select to deselected
+  dcs_high(); //MP3_XDCS, Init Data Select to deselected
+
+  // most importantly...
+  digitalWrite(MP3_RESET, LOW); //Put VS1053 into hardware reset
+
+  playing_state = deactivated;
+}
+
+

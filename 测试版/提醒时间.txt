@@ -1,0 +1,5 @@
+unsigned long TIME = 3000; //设定的坐下安全时间：3s
+unsigned long TIME1 = 6000; //设定第一次超时时间长度：3s
+unsigned long TIME2 = 8000; //设定第二次超时时间长度：2s
+
+
